@@ -10,6 +10,9 @@ brew install graphicsmagick
 brew install ghostscript
 ```
 
+# Getting started
+
+Check the example
 * `npm install`
-* `node test.js`
-* open `test.html`
+* `node examples/middleware.js`
+* follow the instructions in the console
