@@ -9,7 +9,6 @@
   "dependencies": {
     "gm": "~1.14.2",
     "lodash": "~2.4.1",
-    "express": "~4.1.0"
   },
   "devDependencies": {
     "gulp": "~3.6.2",
@@ -17,5 +16,8 @@
     "gulp-jshint": "~1.5.5",
     "sinon": "~1.9.1",
     "chai": "~1.9.1"
+  },
+  "peerDependencies": {
+    "express": "3 - 4"
   }
 }
