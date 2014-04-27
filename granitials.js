@@ -1,6 +1,6 @@
 'use strict';
 
-var generate   = require('./lib/main'),
+var generate   = require('./lib/main').generate,
     middleware = require('./lib/middleware');
 
 

@@ -12,7 +12,9 @@ brew install ghostscript
 
 # Getting started
 
-Check the example
+Check the examples
 * `npm install`
-* `node examples/middleware.js`
-* follow the instructions in the console
+* `node examples/middleware.js` and follow the instructions in the console
+* `node examples/generate.js` and check generated images in output
+
+
