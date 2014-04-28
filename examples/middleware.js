@@ -9,18 +9,20 @@ try {
 var app = require('express')();
 
 app.get('/path/to/granitials/:size?/:text?', granitials.middleware({
-  image: {color: '#ff0000'},
+  color: '#ff0000',
   allowQueryString: true
 }));
 
 // custom font
 app.get('/path/to/granitials2/:text', granitials.middleware({
-  width: 100,
-  heith: 100,
+  // width: 100,
+  // height: 100,
   // can also specify size: '100x100' instead of width and height
-  font: path.join(__dirname, 'fonts/Lato-Bold.ttf'),
+  size: '50x50',
+  font: path.join(__dirname, 'fonts/Lato-Black.ttf'),
+  fontSize: 25,
+  color: '#ffff00',
   savePath: path.join(__dirname, 'output/middleware/') + '<%- text %>.png', // if not specified, will not save
-  image: {color: '#ff0000'},
   allowQueryString: false
 }));
 
