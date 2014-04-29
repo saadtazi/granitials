@@ -28,6 +28,6 @@ app.get('/path/to/granitials2/:text', granitials.middleware({
 
 app.listen(3000, function() {
   console.log(' open http://127.0.0.1:3000/path/to/granitials/200x200/yep?bgColor=%230eddee');
-  console.log('   or http://127.0.0.1:3000/path/to/granitials/yep');
+  console.log('   or http://127.0.0.1:3000/path/to/granitials2/yep');
 });
 
