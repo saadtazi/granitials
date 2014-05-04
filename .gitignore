@@ -1,4 +1,5 @@
 .DS_Store
 node_modules
 examples/output/middleware/
+coverage
 granitials.sublime-workspace

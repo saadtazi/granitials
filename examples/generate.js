@@ -3,7 +3,7 @@ var path = require('path'),
 try {
   granitials = require('granitials').generate;
 } catch (e) {
-  granitials = require('../');
+  granitials = require('../granitials');
 }
 
 function written(err) {
