@@ -10,7 +10,6 @@ var Granitial = require('../../lib/main');
 function checkImageSize(filePath, width, height, cb) {
   var image = gm(filePath);
   image.size(function(err, size) {
-    console.log(err);
     size.should.eql({width: width, height: height});
     cb();
   });
