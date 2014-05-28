@@ -27,6 +27,11 @@ var img = new Granitial({
     color: '#ffffff'
     // other possible options:
     // font: 'path/to/font'
+    // gravity: 'Center' // see http://www.graphicsmagick.org/GraphicsMagick.html#details-gravity
+    // translateX: null, // defaults to -width
+    // translateY: null, // defaults to -height
+    // translateX: null, // defaults to width
+    // translateY: null, // defaults to height
   }
 });
 

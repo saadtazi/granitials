@@ -1,7 +1,7 @@
 'use strict';
 
 // Chai
-var chai = require('chai')
+var chai = require('chai');
 // var supertestChai = require('supertest-chai');
 // chai.use(require('sinon-chai'));
 chai.use(require('chai-fs'));

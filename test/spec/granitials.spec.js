@@ -56,7 +56,14 @@ describe('#granitial module', function() {
       });
       it('should allow to specify a templated path', function(done) {
         var text = 'write Me';
-        granitial({text: text, font: 8}).write('<%-width%>x<%-height%>_<%-text%>.png', function(err, imgPath) {
+        granitial({
+          text: text,
+          font: 8,
+          translateX: -50,
+          translateY: -50,
+          textPositionX: 50,
+          textPositionY: 50
+        }).write('<%-width%>x<%-height%>_<%-text%>.png', function(err, imgPath) {
           var expectedPath = Granitial.defaults.width + 'x' + Granitial.defaults.width + '_' + text + '.png';
           imgPath.should.eq(expectedPath);
           imgPath.should.be.file();
@@ -92,6 +99,7 @@ describe('#granitial module', function() {
         .get('/r1/100x100/coucou.png')
         .expect(200)
         .expect('Content-Type', 'image/png')
+        /*jshint unused:false */
         .end(function(err, res) {
           checkImageSize('testimg.png', 100, 100, function() {
             fs.unlinkSync('testimg.png');
@@ -105,6 +113,7 @@ describe('#granitial module', function() {
         .get('/r2/coucou.png')
         .expect(200)
         .expect('Content-Type', 'image/png')
+        /*jshint unused:false */
         .end(function(err, res) {
           checkImageSize('testimg2.png', 50, 50, function() {
             fs.unlinkSync('testimg2.png');
@@ -118,6 +127,7 @@ describe('#granitial module', function() {
         .get('/r3?width=200&height=200&text=test')
         .expect(200)
         .expect('Content-Type', 'image/png')
+        /*jshint unused:false */
         .end(function(err, res) {
           checkImageSize('testimg3.png', 200, 200, function() {
             fs.unlinkSync('testimg3.png');
