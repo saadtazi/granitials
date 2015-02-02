@@ -17,8 +17,7 @@
     "camelcase"     : true,
     "curly"         : true,     // Require {} for every new block or scope.
     "eqeqeq"        : true,     // Require triple equals i.e. `===`.
-    "es3"           : true,
-
+    
     "forin"         : false,     // Tolerate `for in` loops without `hasOwnPrototype`.
 
     // We can use !function()(); which has a very clear warning aspect

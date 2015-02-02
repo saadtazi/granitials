@@ -1,11 +1,11 @@
 'use strict';
 
 // Chai
-var chai = require('chai')
-var supertestChai = require('supertest-chai');
+var chai = require('chai');
+// var supertestChai = require('supertest-chai');
 // chai.use(require('sinon-chai'));
 chai.use(require('chai-fs'));
-chai.use(supertestChai.httpAsserts);
+// chai.use(supertestChai.httpAsserts);
 
 
 chai.should();
