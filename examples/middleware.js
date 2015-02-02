@@ -1,8 +1,8 @@
 var path = require('path'),
-    granitials;
+  granitials;
 try {
   granitials = require('granitials');
-} catch (e) {
+} catch ( e ) {
   granitials = require('../');
 }
 
@@ -26,8 +26,21 @@ app.get('/path/to/granitials2/:text', granitials.middleware({
   allowQueryString: false
 }));
 
+app.get('/svg/:text', granitials.svg({
+  size: '50x50',
+  font: path.join(__dirname, 'fonts/Lato-Black.ttf'),
+  fontSize: 25,
+  color: '#ffff00',
+  allowQueryString: false,
+  fontName: 'custom',
+  fontUrls: {
+    woff2: 'http://fonts.gstatic.com/s/slabo27px/v2/PuwvqkdbcqU-fCZ9Ed-b7QzyDMXhdD8sAj6OAJTFsBI.woff2'
+  }
+}));
+
 app.listen(3000, function() {
   console.log(' open http://127.0.0.1:3000/path/to/granitials/200x200/yep?bgColor=%230eddee');
   console.log('   or http://127.0.0.1:3000/path/to/granitials2/yep');
+  console.log('   or http://127.0.0.1:3000/svg/yep');
 });
 

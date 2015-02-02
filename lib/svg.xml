@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="<%=width%>px" height="<%=height%>px" viewBox="0 0 <%=width%> <%=height%>">
+
+<% if (fontUrls) { %>
+<defs>
+  <style type="text/css">
+    <![CDATA[
+    @font-face {
+      font-family: '<%=fontName%>';
+      <% Object.keys(fontUrls).forEach(function (format) { %>
+      src: url('<%=fontUrls[format]%>') format('<%=format%>');
+      <% }) %>
+    }
+    ]]>
+  </style>
+</defs>
+
+<% } %>
+
+  <% if (color) { %>
+  <rect x="1" y="1" width="<%=width%>" height="<%=height%>"
+        fill="<%=color%>" />
+  <% } %>
+  <text x="<%=width / 2%>" y="<%=height / 2%>" 
+        <% if (fontName) { %>font-family="<%=fontName%>"<% } %> text-anchor="middle" dominant-baseline="middle"
+        font-size="<%=fontSize%>"><%=text%></text>
+
+  
+</svg>
