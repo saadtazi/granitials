@@ -6,5 +6,6 @@ var generate = require('./lib/main').generate,
 
 
 generate.middleware = middleware.png;
+generate.png = middleware.png;
 generate.svg = middleware.svg;
 module.exports = generate;

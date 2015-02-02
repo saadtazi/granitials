@@ -64,8 +64,10 @@ For supported font format, see [GraphicsMagick](http://www.graphicsmagick.org/Gr
 
 ## Usage
 
+### png
+
 ```
-app.get('/path/to/granitials/:size?/:text?', granitials.middleware({
+app.get('/path/to/granitials/:size?/:text?', granitials.png({
   color: '#ff0000',
   allowQueryString: true
 }));
@@ -83,6 +85,21 @@ It supports the same params as `new Granitial()` described above, plus the follo
 // this will crash if <%-width%>x<%-height%>/ folder does not exist
 savePath: 'path/to/folder/<%-width%>x<%-height%>/<%- text%>.png'
 ```
+
+### svg
+
+```
+app.get('/path/to/svg/:size/:text', granitials.svg({
+  color: '#ff0000',
+  allowQueryString: false
+}));
+```
+
+Supported options:
+
+* `fontUrls`: JSON object with key = font format (ie. woff2, ttf...), value = url of the font file
+* fontName: font name defined by fontUrls, or font family if fontUrls is not used
+
 
 # Examples
 

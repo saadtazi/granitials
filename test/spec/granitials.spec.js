@@ -10,15 +10,10 @@ var Granitial = require('../../lib/main');
 function checkImageSize(filePath, width, height, cb) {
   var image = gm(filePath);
   image.size(function(err, size) {
-<<<<<<< HEAD
-    console.log(err);
     size.should.eql({
       width: width,
       height: height
     });
-=======
-    size.should.eql({width: width, height: height});
->>>>>>> 74513ee9ebf020b2eae125bff3d1a59718029d08
     cb();
   });
 }
@@ -71,15 +66,11 @@ describe('#granitial module', function() {
         var text = 'write Me';
         granitial({
           text: text,
-<<<<<<< HEAD
-          font: 8
-=======
           font: 8,
           translateX: -50,
           translateY: -50,
           textPositionX: 50,
           textPositionY: 50
->>>>>>> 74513ee9ebf020b2eae125bff3d1a59718029d08
         }).write('<%-width%>x<%-height%>_<%-text%>.png', function(err, imgPath) {
           var expectedPath = Granitial.defaults.width + 'x' + Granitial.defaults.width + '_' + text + '.png';
           imgPath.should.eq(expectedPath);
@@ -202,3 +193,4 @@ describe('#granitial module', function() {
     });
   });
 });
+
